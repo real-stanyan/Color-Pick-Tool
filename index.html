@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Color Pick</title>
+</head>
+
+<body>
+    <div id="display_design" style="display: none;">
+        <div>X</div>
+    </div>
+    <div id="reg_warning_container" style="display: none;">
+        <div id="reg_warning">
+
+            <h1>Warning!</h1>Enter a Valid Pantone C Color you Fucking idiot!<br />
+            If you don't know what does Valid Pantone C Color look like,
+            go visit
+            <a href="https://webtemple.io/all-pantone-c-colors-with-hex-and-rgb-codes/"
+                target="_blank">https://webtemple.io/all-pantone-c-colors-with-hex-and-rgb-codes/</a>
+            <button>OK</button>
+        </div>
+    </div>
+    <div id="display_area">
+        <div id="outside_look">
+            <h1>Outside Look</h1>
+            <div id="outside_belt"></div>
+            <div id="outside_ppc">| .. |</div>
+            <div class="locker">
+                <p>Furry Friends</p>
+            </div>
+        </div>
+        <div id="inside_look">
+            <h1>Inside Look</h1>
+            <div id="inside_belt"></div>
+            <div id="inside_ppc"></div>
+
+            <div class="locker">
+                <p>Furry Friends</p>
+            </div>
+        </div>
+    </div>
+    <div id="control_area">
+        <div class="form_control">
+            <label for="outsideBeltColor">Outside Belt Color: </label>
+            <input type="text" name="outsideBeltColor" id="outsideBelt_color" class="inputs">
+            <div id="outsideBelt_color_display"></div>
+        </div>
+        <div class="form_control">
+            <label for="insideBeltColor">Inside Belt Color: </label>
+            <input type="text" name="insideBeltColor" id="insideBelt_color" class="inputs">
+            <div id="insideBelt_color_display"></div>
+        </div>
+        <div class="form_control">
+            <label for="PPCBorderColor">PVC Border Color: </label>
+            <input type="text" name="PPCBorderColor" id="ppcBorder_color" class="inputs">
+            <div id="ppcBorder_color_display"></div>
+        </div>
+        <div class="form_control">
+            <label for="PPCBgColor">PVC Background Color: </label>
+            <input type="text" name='PPCBgColor' id="ppc_bgcolor" class="inputs">
+            <div id="ppc_bgcolor_display"></div>
+        </div>
+        <div class="form_control">
+            <label for="PPCImageColor">PVC Image Color: </label>
+            <input type="text" name="PPCImageColor" id="ppcImage_color" class="inputs">
+            <div id="ppcImage_color_display"></div>
+        </div>
+    </div>
+    <div id="btns">
+        <div id="reset_colors">Reset Colors</div>
+        <div id="choose_color">Choose Color</div>
+        <div id="save_design">Save Design</div>
+    </div>
+    <script src="./JS/action.js"></script>
+    <script src="./JS/pantoneToHex.js"></script>
+    <script src="./JS/html2canvas.js"></script>
+</body>
+
+</html>
