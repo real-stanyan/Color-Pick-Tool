@@ -67,3 +67,33 @@
   color: aliceblue;
   font-size: 2vw;
 }
+
+#lock_message {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20vw;
+  height: 8vh;
+  line-height: 8vh;
+  text-align: center;
+  color: aliceblue;
+  font-size: 1.2vw;
+  animation-name: bounce;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes bounce {
+  0% {
+    font-size: 1.2vw;
+  }
+  50% {
+    font-size: 1.3vw;
+  }
+  100% {
+    font-size: 1.2vw;
+  }
+}

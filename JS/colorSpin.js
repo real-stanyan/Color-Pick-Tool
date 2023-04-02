@@ -1345,6 +1345,7 @@ const PantoneC = [
 const ColorSpinContainer = document.querySelector("#color_spin");
 
 window.addEventListener("load", () => {
+  let lock = false;
   PantoneC.forEach((color) => {
     const ColorSpin = document.createElement("div");
     ColorSpin.classList.add("colors");
@@ -1362,20 +1363,40 @@ window.addEventListener("load", () => {
   ColorSpinContainer.addEventListener("mouseenter", () => {
     Colors.forEach((color, index) => {
       color.addEventListener("mouseenter", () => {
-        color.style.height = "20vh";
-        color.style.width = "1vw";
-        color.style.borderRadius = "1px";
-        ColorSpinDisplay.style.backgroundColor = `${color.style.backgroundColor}`;
-        Pantone.innerHTML = `${PantoneC[index]}`;
-        ColorCount = document.querySelector("#color_count");
-        ColorCount.innerHTML = `${index + 1}/1341`;
+        if (lock == false) {
+          color.style.height = "20vh";
+          color.style.width = "1vw";
+          color.style.borderRadius = "1px";
+          ColorSpinDisplay.style.backgroundColor = `${color.style.backgroundColor}`;
+          Pantone.innerHTML = `${PantoneC[index]}`;
+          ColorCount = document.querySelector("#color_count");
+          ColorCount.innerHTML = `${index + 1}/1341`;
+        }
+      });
+      let LockMessage = document.querySelector("#lock_message");
+      color.addEventListener("click", () => {
+        color.style.height = "25vh";
+        color.style.width = "2vw";
+        lock = true;
+        LockMessage.style.display = "block";
+        window.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") {
+            lock = false;
+            color.style.height = "10vh";
+            color.style.width = "1px";
+            LockMessage.style.display = "none";
+          }
+        });
       });
       color.addEventListener("mouseout", () => {
-        color.style.height = "10vh";
-        color.style.width = "1px";
+        if (lock == false) {
+          color.style.height = "10vh";
+          color.style.width = "1px";
+        }
       });
     });
   });
+
   const Back = document.querySelector("#back");
   Back.addEventListener("click", () => {
     window.location.href = "index.html";
