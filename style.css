@@ -73,6 +73,7 @@
   top: calc(50% - (30% / 2));
   right: 10vw;
   border-radius: 1vw 10vw 10vw 1vw;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   background-color: #000;
   color: #e8e8e8;
 }
