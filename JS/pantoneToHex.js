@@ -1,5 +1,7 @@
 function pantoneToHex(color) {
   switch (color) {
+    case "#000":
+      return "#000";
     case "Yellow C":
       return "#FEDD00";
     case "Yellow 012 C":

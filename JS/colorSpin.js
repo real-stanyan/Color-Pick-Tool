@@ -1,4 +1,46 @@
 const PantoneC = [
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
   "Yellow C",
   "Yellow 012 C",
   "Orange 021 C",
@@ -1340,6 +1382,48 @@ const PantoneC = [
   "Black 5 C",
   "Black 6 C",
   "Black 7 C",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
+  "#000",
 ];
 
 const ColorSpinContainer = document.querySelector("#color_spin");
@@ -1351,7 +1435,6 @@ window.addEventListener("load", () => {
     ColorSpin.classList.add("colors");
     ColorSpinContainer.appendChild(ColorSpin);
   });
-
   const Colors = document.querySelectorAll(".colors");
   Colors.forEach((color, index) => {
     let c = PantoneC[index];
@@ -1366,11 +1449,47 @@ window.addEventListener("load", () => {
         if (lock == false) {
           color.style.height = "20vh";
           color.style.width = "1vw";
+
           color.style.borderRadius = "1px";
           ColorSpinDisplay.style.backgroundColor = `${color.style.backgroundColor}`;
           Pantone.innerHTML = `${PantoneC[index]}`;
           ColorCount = document.querySelector("#color_count");
           ColorCount.innerHTML = `${index + 1}/1341`;
+
+          // if (index >= 1330) return;
+          let next = color.nextElementSibling;
+          let next1 = next.nextElementSibling;
+          let next2 = next1.nextElementSibling;
+          let next3 = next2.nextElementSibling;
+          let next4 = next3.nextElementSibling;
+
+          next.style.height = "18vh";
+          next.style.width = "1vw";
+          next1.style.height = "16vh";
+          next1.style.width = "1vw";
+          next2.style.height = "14vh";
+          next2.style.width = "1vw";
+          next3.style.height = "12vh";
+          next3.style.width = "1vw";
+          next4.style.height = "10vh";
+          next4.style.width = "1vw";
+
+          // if (index <= 10) return;
+          let prev = color.previousElementSibling;
+          let prev1 = prev.previousElementSibling;
+          let prev2 = prev1.previousElementSibling;
+          let prev3 = prev2.previousElementSibling;
+          let prev4 = prev3.previousElementSibling;
+          prev.style.height = "18vh";
+          prev.style.width = "1vw";
+          prev1.style.height = "16vh";
+          prev1.style.width = "1vw";
+          prev2.style.height = "14vh";
+          prev2.style.width = "1vw";
+          prev3.style.height = "12vh";
+          prev3.style.width = "1vw";
+          prev4.style.height = "10vh";
+          prev4.style.width = "1vw";
         }
       });
       let LockMessage = document.querySelector("#lock_message");
@@ -1392,6 +1511,41 @@ window.addEventListener("load", () => {
         if (lock == false) {
           color.style.height = "10vh";
           color.style.width = "1px";
+
+          // if (index <= 10) return;
+          let prev = color.previousElementSibling;
+          let prev1 = prev.previousElementSibling;
+          let prev2 = prev1.previousElementSibling;
+          let prev3 = prev2.previousElementSibling;
+          let prev4 = prev3.previousElementSibling;
+          prev.style.height = "10vh";
+          prev.style.width = "1px";
+          prev1.style.height = "10vh";
+          prev1.style.width = "1px";
+          prev2.style.height = "10vh";
+          prev2.style.width = "1px";
+          prev3.style.height = "10vh";
+          prev3.style.width = "1px";
+          prev4.style.height = "10vh";
+          prev4.style.width = "1px";
+          // if (index >= 1330) return;
+
+          let next = color.nextElementSibling;
+          let next1 = next.nextElementSibling;
+          let next2 = next1.nextElementSibling;
+          let next3 = next2.nextElementSibling;
+          let next4 = next3.nextElementSibling;
+
+          next.style.height = "10vh";
+          next.style.width = "1px";
+          next1.style.height = "10vh";
+          next1.style.width = "1px";
+          next2.style.height = "10vh";
+          next2.style.width = "1px";
+          next3.style.height = "10vh";
+          next3.style.width = "1px";
+          next4.style.height = "10vh";
+          next4.style.width = "1px";
         }
       });
     });

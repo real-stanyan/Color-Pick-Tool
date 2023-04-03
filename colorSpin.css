@@ -19,15 +19,16 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  left: 10vw;
+  /* left: 10vw; */
   bottom: 10vh;
-  width: 80vw;
+  width: 100vw;
   height: 10vh;
 }
 
 .colors {
   width: 1px;
   height: 10vh;
+  display: flex;
 }
 
 #color_spin_display {
